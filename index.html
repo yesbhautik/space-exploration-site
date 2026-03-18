@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Exploration Journey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+        
+        .emoji {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        
+        .facts {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .facts h2 {
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .facts ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .facts li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .facts li:last-child {
+            border-bottom: none;
+        }
+        
+        .facts li::before {
+            content: "🚀 ";
+            margin-right: 10px;
+        }
+        
+        .cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🌌</div>
+        <h1>Space Exploration Journey</h1>
+        <p>
+            Welcome to an amazing journey through the cosmos! Space exploration has been humanity's 
+            greatest adventure, pushing the boundaries of what we know and can achieve. From the first 
+            satellite to rovers on Mars, we've come a long way in understanding our place in the universe.
+        </p>
+        <p>
+            The vastness of space holds countless mysteries waiting to be discovered. With each mission, 
+            we learn more about distant planets, stars, and galaxies that make up our incredible universe.
+        </p>
+        
+        <div class="facts">
+            <h2>Amazing Space Facts</h2>
+            <ul>
+                <li>One day on Venus is longer than one year on Venus</li>
+                <li>There are more stars in the universe than grains of sand on Earth</li>
+                <li>A neutron star can spin 600 times per second</li>
+                <li>Space is completely silent because there's no air</li>
+                <li>The footprints on the Moon will last for 100 million years</li>
+            </ul>
+        </div>
+        
+        <div class="cta">
+            <a href="#" class="btn" onclick="alert('Keep exploring the cosmos! 🌟'); return false;">Explore More</a>
+        </div>
+    </div>
+    
+    <script>
+        // Add some interactivity
+        document.querySelector('.emoji').addEventListener('click', function() {
+            this.style.transform = 'rotate(360deg)';
+            this.style.transition = 'transform 1s ease';
+            setTimeout(() => {
+                this.style.transform = 'rotate(0deg)';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
